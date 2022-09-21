@@ -8,14 +8,14 @@ public class HomePage {
 	
 public WebDriver driver;
 
-By motori = By.cssSelector("a[title='Motori'] > .icon-cat-29");
+By Mtorcycles = By.cssSelector("a[title='Motori'] > .icon-cat-29");
 
 public HomePage (WebDriver driver) {
 	this.driver = driver;
 }
 
-public WebElement getMotori () {
-	return driver.findElement(motori);
+public WebElement getMtorcycles () {
+	return driver.findElement(Mtorcycles);
 }
 
 }
