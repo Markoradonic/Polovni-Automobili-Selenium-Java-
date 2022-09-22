@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import base.BaseClass;
+import pageObjects.CarsPage;
 import pageObjects.DetailedMotorcyclessSearchClass;
 import pageObjects.HomePage;
 import pageObjects.MotorcyclesPage;
@@ -29,11 +30,11 @@ public class DropdownSelectTest extends BaseClass {
 		driver.get(getUrl());
 	}
 	
-	@AfterTest
-	public void tearDown () {
-		driver.close();
-		driver = null;
-	}
+//	@AfterTest
+//	public void tearDown () {
+//		driver.close();
+//		driver = null;
+//	}
 	
 
 	@Test
@@ -76,8 +77,36 @@ public class DropdownSelectTest extends BaseClass {
 	
 	}
 	
-	
+	@Test
 	public void carTest () {
+		
+		CarsPage car = new CarsPage(driver);
+		
+		Select dropdownCarSelect = new Select(car.getBrandCars());
+		dropdownCarSelect.selectByValue("fiat");
+		
+		Select dropdownModelCar = new Select(car.getModelCar());
+		dropdownModelCar.selectByValue("grande-punto");
+		
+		Select dropdownYearFrom = new Select(car.getYearFrom());
+		dropdownYearFrom.selectByValue("2010");
+		
+		// Scrolling
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,500)");
+		
+		car.getButtonDetailedSearch().click();
+
+		js.executeScript("window.scrollBy(0,1000)");
+		
+		car.getPassengerAirbag().click();
+		
+		js.executeScript("window.scrollBy(0,-800)");
+		
+		car.getButtonSubmit().click();
+		
+		js.executeScript("window.scrollBy(0,1000)");
+
 		
 	}
 	
