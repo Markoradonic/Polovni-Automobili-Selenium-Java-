@@ -2,7 +2,10 @@ package polovniautomobili.com;
 
 import java.io.IOException;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -13,6 +16,8 @@ import pageObjects.CarsPage;
 import pageObjects.DetailedMotorcyclessSearchClass;
 import pageObjects.HomePage;
 import pageObjects.MotorcyclesPage;
+import resources.SearchSettings;
+import resources.SrcSettings;
 
 
 
@@ -76,17 +81,20 @@ public class DropdownSelectTest extends BaseClass {
 		motoPage.getButtonSubmitt().click();	
 	
 	}
-	
+
 	@Test
-	public void carTest () {
+	public void carTest () throws IOException {
 		
 		CarsPage car = new CarsPage(driver);
+		SearchSettings buttonSearchSettings = new SearchSettings();
+		SrcSettings crs = new SrcSettings();
+		System.out.println(crs.getCarBrand()); 
 		
 		Select dropdownCarSelect = new Select(car.getBrandCars());
-		dropdownCarSelect.selectByValue("fiat");
+		dropdownCarSelect.selectByValue(crs.getCarBrand());
 		
 		Select dropdownModelCar = new Select(car.getModelCar());
-		dropdownModelCar.selectByValue("grande-punto");
+		dropdownModelCar.selectByValue(buttonSearchSettings.getModelOfOpel());
 		
 		Select dropdownYearFrom = new Select(car.getYearFrom());
 		dropdownYearFrom.selectByValue("2010");
@@ -97,15 +105,21 @@ public class DropdownSelectTest extends BaseClass {
 		
 		car.getButtonDetailedSearch().click();
 
-		js.executeScript("window.scrollBy(0,1000)");
-		
-		car.getPassengerAirbag().click();
-		
 		js.executeScript("window.scrollBy(0,-800)");
 		
+		if(crs.getcheckboxPassengerAirbag() == true) {
+			js.executeScript("window.scrollBy(0,500)");
+			car.getPassengerAirbag().click();
+			System.out.println("the button was clicked" + crs.getcheckboxPassengerAirbag() );
+		}else {
+			System.out.println("it's not clicked");
+			System.out.println("it's not clicked" + crs.getcheckboxPassengerAirbag() );
+		}
+		
+		js.executeScript("window.scrollBy(0,-500)");
 		car.getButtonSubmit().click();
 		
-		js.executeScript("window.scrollBy(0,1000)");
+		
 
 		
 	}
