@@ -6,6 +6,7 @@
       <class name="polovniautomobili.com.DropdownSelectTest">
         <methods>
           <include name="carTest"/>
+          <include name="tearDown"/>
           <include name="setup"/>
         </methods>
       </class> <!-- polovniautomobili.com.DropdownSelectTest -->

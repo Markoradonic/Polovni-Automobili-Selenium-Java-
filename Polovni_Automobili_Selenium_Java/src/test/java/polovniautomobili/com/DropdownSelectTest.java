@@ -1,6 +1,7 @@
 package polovniautomobili.com;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -12,12 +13,12 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import base.BaseClass;
+import base.SearchSettings;
 import pageObjects.CarsPage;
 import pageObjects.DetailedMotorcyclessSearchClass;
 import pageObjects.HomePage;
 import pageObjects.MotorcyclesPage;
-import resources.SearchSettings;
-import resources.SrcSettings;
+
 
 
 
@@ -35,11 +36,11 @@ public class DropdownSelectTest extends BaseClass {
 		driver.get(getUrl());
 	}
 	
-//	@AfterTest
-//	public void tearDown () {
+	@AfterTest
+	public void tearDown () {
 //		driver.close();
 //		driver = null;
-//	}
+	}
 	
 
 	@Test
@@ -48,13 +49,14 @@ public class DropdownSelectTest extends BaseClass {
 		HomePage MotorcyclesPage = new HomePage(driver);
 		MotorcyclesPage motoPage = new MotorcyclesPage(driver); 
 		DetailedMotorcyclessSearchClass searchMotorcycles = new DetailedMotorcyclessSearchClass(driver);
+		SearchSettings crs = new SearchSettings();
 		
 		// PageObjects -> HomePage
 		MotorcyclesPage.getMtorcycles().click();
 		
 		// PageObjects -> MotorcyclesPage
 		Select brandMotorcycle = new Select(motoPage.getBrandMotorcycles()); 
-		brandMotorcycle.selectByValue("yamaha");
+		brandMotorcycle.selectByValue(crs.getMotorcycleBrand());
 
 		// price 
 		motoPage.getPrice().sendKeys("10000");
@@ -83,21 +85,19 @@ public class DropdownSelectTest extends BaseClass {
 	}
 
 	@Test
-	public void carTest () throws IOException {
+	public void carTest () throws IOException, InterruptedException {
 		
 		CarsPage car = new CarsPage(driver);
-		SearchSettings buttonSearchSettings = new SearchSettings();
-		SrcSettings crs = new SrcSettings();
-		System.out.println(crs.getCarBrand()); 
+		SearchSettings crs = new SearchSettings();
 		
 		Select dropdownCarSelect = new Select(car.getBrandCars());
 		dropdownCarSelect.selectByValue(crs.getCarBrand());
 		
 		Select dropdownModelCar = new Select(car.getModelCar());
-		dropdownModelCar.selectByValue(buttonSearchSettings.getModelOfOpel());
+		dropdownModelCar.selectByValue(crs.getModelOfCar());
 		
 		Select dropdownYearFrom = new Select(car.getYearFrom());
-		dropdownYearFrom.selectByValue("2010");
+		dropdownYearFrom.selectByValue(crs.getYearFrom());
 		
 		// Scrolling
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -110,18 +110,26 @@ public class DropdownSelectTest extends BaseClass {
 		if(crs.getcheckboxPassengerAirbag() == true) {
 			js.executeScript("window.scrollBy(0,500)");
 			car.getPassengerAirbag().click();
-			System.out.println("the button was clicked" + crs.getcheckboxPassengerAirbag() );
+			System.out.println("the button was clicked " + crs.getcheckboxPassengerAirbag() );
 		}else {
-			System.out.println("it's not clicked");
-			System.out.println("it's not clicked" + crs.getcheckboxPassengerAirbag() );
+			System.out.println("it's not clicked " + crs.getcheckboxPassengerAirbag() );
 		}
 		
 		js.executeScript("window.scrollBy(0,-500)");
 		car.getButtonSubmit().click();
-		
-		
 
+		String firstParth = "//div[@id='search-results']/div[@class='js-hide-on-filter']/article[";
+		String secondParth = "]/div[@class='image']";
+		for(int i = 2; i < 5; i++) {
+			
+			js.executeScript("window.scrollBy(0,1400)");
+			driver.findElement(By.xpath(firstParth + i + secondParth)).click();
+			driver.navigate().back();
+		}
 		
+	
+		driver.get(getUrl());
+
 	}
 	
 }

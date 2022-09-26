@@ -1,16 +1,13 @@
 package resources;
 
-import java.util.Properties;
-
-public class SearchSettings {
-	
+public class test {
 //	final String opel = "opel"; // this is constanta 
 	Boolean checkboxPassengerAirbag = true;
 	String carBrand = "opel";
 	String modelOfOpel = "corsa";
 	String errorMessage = "Is not exist";
 
-	public SearchSettings() {
+	public test() {
 		this.checkboxPassengerAirbag = checkboxPassengerAirbag;
 	}
 
@@ -51,6 +48,4 @@ public class SearchSettings {
 			return errorMessage;
 		}
 	}
-
-
 }
