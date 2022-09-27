@@ -18,6 +18,7 @@ import pageObjects.CarsPage;
 import pageObjects.DetailedMotorcyclessSearchClass;
 import pageObjects.HomePage;
 import pageObjects.MotorcyclesPage;
+import pageObjects.SelectedPage;
 
 
 
@@ -38,8 +39,8 @@ public class DropdownSelectTest extends BaseClass {
 	
 	@AfterTest
 	public void tearDown () {
-//		driver.close();
-//		driver = null;
+		driver.close();
+		driver = null;
 	}
 	
 
@@ -48,7 +49,6 @@ public class DropdownSelectTest extends BaseClass {
 		
 		HomePage MotorcyclesPage = new HomePage(driver);
 		MotorcyclesPage motoPage = new MotorcyclesPage(driver); 
-		DetailedMotorcyclessSearchClass searchMotorcycles = new DetailedMotorcyclessSearchClass(driver);
 		SearchSettings crs = new SearchSettings();
 		
 		// PageObjects -> HomePage
@@ -57,27 +57,36 @@ public class DropdownSelectTest extends BaseClass {
 		// PageObjects -> MotorcyclesPage
 		Select brandMotorcycle = new Select(motoPage.getBrandMotorcycles()); 
 		brandMotorcycle.selectByValue(crs.getMotorcycleBrand());
+		
+		//get model
+		motoPage.getModelMotorcycles().sendKeys(crs.getMotorcycleModel());
 
 		// price 
-		motoPage.getPrice().sendKeys("10000");
+		motoPage.getPrice().sendKeys(crs.getMotorcyclesPrice());
 		
 		// YearFrom
 		Select dropdownYearFrom = new Select(motoPage.getYearFrom());
-		dropdownYearFrom.selectByValue("2010");
+		dropdownYearFrom.selectByValue(crs.getMotorcycleYearFrom());
 		
 		// Type Motorcycle
-		Select dropdownType = new Select(motoPage.getTypeMotorcycles());
-		dropdownType.selectByValue("naked");
-		dropdownType.selectByValue("sport-super-sport");
+		if(crs.getNeked() == true) {
+			Select dropdownType = new Select(motoPage.getTypeMotorcycles());
+			dropdownType.selectByValue(crs.getMotorcycleTypeNeked());
+			System.out.println(crs.getMotorcycleTypeNeked());
+		}if(crs.getSportSuperSport() == true) {
+			Select dropdownType = new Select(motoPage.getTypeMotorcycles());
+			dropdownType.selectByValue(crs.getMotorcycleTypeSportSuperSport());
+			System.out.println(crs.getMotorcycleTypeSportSuperSport());
+		}
+//		Select dropdownType = new Select(motoPage.getTypeMotorcycles());
+//		dropdownType.selectByValue(crs.getTypeOfMotorcycle());
+//		dropdownType.selectByValue("sport-super-sport");
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,600)");
+		js.executeScript("arguments[0].scrollIntoView();",motoPage.getButtonDetailedSearch());
 		
 		// ButtonDetailedSearch
 		motoPage.getButtonDetailedSearch().click();
-		
-		Select dropdownSearchMotorcycles = new Select(searchMotorcycles.getCylindr());
-		dropdownSearchMotorcycles.selectByValue("660");
 		
 		// after the completed form
 		motoPage.getButtonSubmitt().click();	
@@ -89,45 +98,49 @@ public class DropdownSelectTest extends BaseClass {
 		
 		CarsPage car = new CarsPage(driver);
 		SearchSettings crs = new SearchSettings();
+		SelectedPage selectPage = new SelectedPage(driver);
 		
 		Select dropdownCarSelect = new Select(car.getBrandCars());
 		dropdownCarSelect.selectByValue(crs.getCarBrand());
 		
 		Select dropdownModelCar = new Select(car.getModelCar());
-		dropdownModelCar.selectByValue(crs.getModelOfCar());
+		dropdownModelCar.selectByValue(crs.getCarModel());
 		
 		Select dropdownYearFrom = new Select(car.getYearFrom());
-		dropdownYearFrom.selectByValue(crs.getYearFrom());
+		dropdownYearFrom.selectByValue(crs.getCarYearFrom());
 		
 		// Scrolling
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,500)");
+		js.executeScript("arguments[0].scrollIntoView();",car.getButtonDetailedSearch());
 		
 		car.getButtonDetailedSearch().click();
 
-		js.executeScript("window.scrollBy(0,-800)");
-		
-		if(crs.getcheckboxPassengerAirbag() == true) {
-			js.executeScript("window.scrollBy(0,500)");
+		if(crs.getCheckboxPassengerAirbag() == true) {
+			js.executeScript("arguments[0].scrollIntoView();",car.getPassengerAirbag());
 			car.getPassengerAirbag().click();
-			System.out.println("the button was clicked " + crs.getcheckboxPassengerAirbag() );
+			System.out.println("the button was clicked " + crs.getCheckboxPassengerAirbag() );
 		}else {
-			System.out.println("it's not clicked " + crs.getcheckboxPassengerAirbag() );
+			System.out.println("it's not clicked " + crs.getCheckboxPassengerAirbag() );
 		}
-		
-		js.executeScript("window.scrollBy(0,-500)");
+
+		js.executeScript("arguments[0].scrollIntoView();",car.getButtonSubmit());
 		car.getButtonSubmit().click();
 
-		String firstParth = "//div[@id='search-results']/div[@class='js-hide-on-filter']/article[";
-		String secondParth = "]/div[@class='image']";
-		for(int i = 2; i < 5; i++) {
+		String firstParth = selectPage.getFirstParthOfXpath();
+		String secondParth = selectPage.getSecondParthOfXpath();
+
+		System.out.println("all xpath for cars");
+		for(int i = 1; i < 4 ; i++) {
 			
-			js.executeScript("window.scrollBy(0,1400)");
-			driver.findElement(By.xpath(firstParth + i + secondParth)).click();
-			driver.navigate().back();
+			String sum = firstParth + i + secondParth;
+				WebElement Element = driver.findElement(By.xpath(sum));
+				js.executeScript("arguments[0].scrollIntoView();",Element );
+				System.out.println(driver.findElement(By.xpath(sum)));
+				Thread.sleep(1000);
+				driver.findElement(By.xpath(sum)).click();;
+				driver.navigate().back();		
 		}
-		
-	
+
 		driver.get(getUrl());
 
 	}

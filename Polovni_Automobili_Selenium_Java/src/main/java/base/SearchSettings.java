@@ -7,20 +7,12 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 
 public class SearchSettings {
-public static WebDriver driver;
 	
 	private Properties prop;
-	private String opel;
-	Boolean checkboxPassengerAirbag;
-	private String ModelOfCar;
-	private String yearFrom;
-	private String motorcycleBrand;
+	private String getPropString;
+	Boolean getCheckboxButton;
 
 
-
-
-
-	
 	
 	public SearchSettings () throws IOException {
 		prop = new Properties();
@@ -28,31 +20,69 @@ public static WebDriver driver;
 				System.getProperty("user.dir") + "\\src\\main\\java\\resources\\SearchGlobalSettings.properties");
 		prop.load(data);
 	}
-	
-	
+
+	/* get properties of cars */
 	public String getCarBrand() {
-		opel = prop.getProperty("carBrand");
-		return opel;
+		getPropString = prop.getProperty("carBrand");
+		return getPropString;
 	}
 	
-	public String getModelOfCar() {
-		ModelOfCar = prop.getProperty("modelOfCar");
-		return ModelOfCar;
+	public String getCarModel() {
+		getPropString = prop.getProperty("modeOfCar");
+		return getPropString;
 	}
 	
-	public String getYearFrom() {
-		yearFrom = prop.getProperty("yearFrom");
-		return yearFrom;
+	public String getCarYearFrom() {
+		getPropString = prop.getProperty("yearCarFrom");
+		return getPropString;
 	}
 	
-	public Boolean getcheckboxPassengerAirbag() {
-		checkboxPassengerAirbag = Boolean.parseBoolean(prop.getProperty("checkboxPassengerAirbag"));
-		return checkboxPassengerAirbag;
+	public Boolean getCheckboxPassengerAirbag() {
+		getCheckboxButton = Boolean.parseBoolean(prop.getProperty("checkboxPassengerAirbag"));
+		return getCheckboxButton;
 	}
 	
+	/* get properties of Motorcycles */
 	public String getMotorcycleBrand () {
-		motorcycleBrand = prop.getProperty("MotorcycleBrand");
-		return motorcycleBrand;
+		getPropString = prop.getProperty("motorcycleBrand");
+		return getPropString;
+	}
+	
+	public String getMotorcycleModel () {
+		getPropString = prop.getProperty("modelOfMotorcycle");
+		return getPropString;
+	}
+	
+	public String getMotorcyclesPrice () {
+		getPropString = prop.getProperty("priceOfMotorcycles");
+		return getPropString;
+	}
+	
+	public String getMotorcycleYearFrom () {
+		getPropString = prop.getProperty("yearMotorcycleFrom");
+		return getPropString;
+	}
+	
+	public String getMotorcycleTypeNeked () {
+		getPropString = prop.getProperty("nakedTypeMotorcycles");
+		return getPropString;
+	}
+	
+	public String getMotorcycleTypeSportSuperSport () {
+		getPropString = prop.getProperty("sportSuperSportTypeMotorcycles");
+		return getPropString;
+	}
+	
+	
+
+	public Boolean getNeked () {
+		getCheckboxButton = Boolean.parseBoolean(prop.getProperty("naked"));
+		return getCheckboxButton;
+	}
+	
+	public Boolean getSportSuperSport () {
+		getCheckboxButton = Boolean.parseBoolean(prop.getProperty("sportSuperSport"));
+		return getCheckboxButton;
 	}
 	
 
