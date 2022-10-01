@@ -2,20 +2,20 @@ package polovniautomobili.com;
 
 import java.io.IOException;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+
+
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import base.BaseClass;
-import base.SearchSettings;
+
 import dataProviders.DataProviderClass;
 import pageObjects.CarsPage;
 import pageObjects.HomePage;
 import pageObjects.MotorcyclesPage;
-import pageObjects.SelectedPage;
+
 
 public class SearchTypingTest extends BaseClass{
 	
@@ -79,8 +79,6 @@ public class SearchTypingTest extends BaseClass{
 	public void SearcCarsTest (String brand) throws InterruptedException {
 		
 		CarsPage car = new CarsPage(driver);
-//		SearchSettings crs = new SearchSettings();
-//		SelectedPage selectPage = new SelectedPage(driver);
 		
 		car.getSearchCarTyping().click();
 		

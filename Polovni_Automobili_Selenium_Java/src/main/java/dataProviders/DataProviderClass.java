@@ -29,11 +29,35 @@ public class DataProviderClass {
 	
 	@DataProvider
 	public Object[][] DropdownMotorcyclesProvider() {
-		Object[][] dataset = new Object[1][3];
+		Object[][] dataset = new Object[2][4];
 		
 		dataset[0][0]="yamaha";
 		dataset[0][1]="mt";
-		dataset[0][3]="7000";
+		dataset[0][2]="7000";
+		dataset[0][3]="2000";
+		
+		dataset[1][0]="suzuki";
+		dataset[1][1]="gsxr";
+		dataset[1][2]="6000";
+		dataset[1][3]="2005";
+
+		
+		
+		return dataset;
+	}
+	
+	@DataProvider
+	public Object[][] DropdownCarsProvider() {
+		Object[][] dataset = new Object[2][3];
+		
+		dataset[0][0]="fiat";
+		dataset[0][1]="punto";
+		dataset[0][2]="2010";
+		
+		dataset[1][0]="opel";
+		dataset[1][1]="corsa";
+		dataset[1][2]="2005";
+
 		
 		
 		return dataset;
@@ -45,14 +69,9 @@ public class DataProviderClass {
 		Object[][] dataset = new Object[2][1];
 		
 		dataset[0][0]="opel";
-//		dataset[0][1]="astra";
-//		dataset[0][2]="6000";
-//		dataset[0][3]="2009";
-//		
+	
 		dataset[1][0]="fiat";
-//		dataset[1][1]="punto";
-//		dataset[1][2]="6500";
-//		dataset[1][3]="2010";
+
 		
 		return dataset;
 	}

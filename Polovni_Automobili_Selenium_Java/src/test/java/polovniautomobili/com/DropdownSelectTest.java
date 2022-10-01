@@ -15,14 +15,12 @@ import org.testng.annotations.Test;
 
 import base.BaseClass;
 import base.SearchSettings;
+import dataProviders.DataProviderClass;
 import pageObjects.CarsPage;
 import pageObjects.DetailedMotorcyclessSearchClass;
 import pageObjects.HomePage;
 import pageObjects.MotorcyclesPage;
 import pageObjects.SelectedPage;
-
-
-
 
 public class DropdownSelectTest extends BaseClass {
 	
@@ -30,7 +28,6 @@ public class DropdownSelectTest extends BaseClass {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
 
 	@BeforeTest
 	public void setup() throws IOException {
@@ -45,8 +42,8 @@ public class DropdownSelectTest extends BaseClass {
 	}
 
 
-	@Test
-	public void motorcyclesTest () throws IOException, InterruptedException {
+	@Test (dataProvider = "DropdownMotorcyclesProvider", dataProviderClass = DataProviderClass.class)
+	public void motorcyclesTest (String brand, String model, String price, String yearFrom) throws IOException, InterruptedException {
 		
 		HomePage MotorcyclesPage = new HomePage(driver);
 		MotorcyclesPage motoPage = new MotorcyclesPage(driver); 
@@ -57,55 +54,56 @@ public class DropdownSelectTest extends BaseClass {
 		
 		// PageObjects -> MotorcyclesPage
 		Select brandMotorcycle = new Select(motoPage.getBrandMotorcycles()); 
-		brandMotorcycle.selectByValue(crs.getMotorcycleBrand());
+		brandMotorcycle.selectByValue(brand);
 		
-		//get model
-		motoPage.getModelMotorcycles().sendKeys(crs.getMotorcycleModel());
 
-		// price 
-		motoPage.getPrice().sendKeys(crs.getMotorcyclesPrice());
+		motoPage.getModelMotorcycles().sendKeys(model);
+		motoPage.getPrice().sendKeys(price);
 		
-		// YearFrom
-		Select dropdownYearFrom = new Select(motoPage.getYearFrom());
-		dropdownYearFrom.selectByValue(crs.getMotorcycleYearFrom());
-		
-		// Type Motorcycle
-		if(crs.getNeked() == true) {
-			Select dropdownType = new Select(motoPage.getTypeMotorcycles());
-			dropdownType.selectByValue(crs.getMotorcycleTypeNeked());
-			System.out.println(crs.getMotorcycleTypeNeked());
-		}if(crs.getSportSuperSport() == true) {
-			Select dropdownType = new Select(motoPage.getTypeMotorcycles());
-			dropdownType.selectByValue(crs.getMotorcycleTypeSportSuperSport());
-			System.out.println(crs.getMotorcycleTypeSportSuperSport());
+		Select motorcycYearFrom = new Select(motoPage.getYearFrom()); 
+		motorcycYearFrom.selectByValue(yearFrom);
+
+		if (brand == "yamaha") {
+			if(crs.getNeked() == true) {
+				Select dropdownType = new Select(motoPage.getTypeMotorcycles());
+				dropdownType.selectByValue(crs.getMotorcycleTypeNeked());
+				System.out.println("type for " + brand +" is " + crs.getMotorcycleTypeNeked());
+			}if(crs.getSportSuperSport() == true) {
+				Select dropdownType = new Select(motoPage.getTypeMotorcycles());
+				dropdownType.selectByValue(crs.getMotorcycleTypeSportSuperSport());
+				System.out.println("the type of " + brand +" is " + crs.getMotorcycleTypeSportSuperSport());
+			}
 		}
-		
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].scrollIntoView();",motoPage.getButtonDetailedSearch());
-		
-		// ButtonDetailedSearch
-		motoPage.getButtonDetailedSearch().click();
-		
+		if (brand == "suzuki") {
+			if(crs.getNeked() == true) {
+				Select dropdownType = new Select(motoPage.getTypeMotorcycles());
+				dropdownType.selectByValue(crs.getMotorcycleTypeNeked());
+				System.out.println("the type of  " + brand +" is " + crs.getMotorcycleTypeNeked());
+			}
+		}
+
 		// after the completed form
 		motoPage.getButtonSubmitt().click();	
+		driver.navigate().back();
 	
 	}
-
-	@Test
-	public void carTest () throws IOException, InterruptedException {
+	
+	
+	@Test (dataProvider = "DropdownCarsProvider", dataProviderClass = DataProviderClass.class)
+	public void carTest (String brand, String model, String yearFrom) throws IOException, InterruptedException {
 		
 		CarsPage car = new CarsPage(driver);
 		SearchSettings crs = new SearchSettings();
 		SelectedPage selectPage = new SelectedPage(driver);
 		
 		Select dropdownCarSelect = new Select(car.getBrandCars());
-		dropdownCarSelect.selectByValue(crs.getCarBrand());
+		dropdownCarSelect.selectByValue(brand);
 		
 		Select dropdownModelCar = new Select(car.getModelCar());
-		dropdownModelCar.selectByValue(crs.getCarModel());
+		dropdownModelCar.selectByValue(model);
 		
 		Select dropdownYearFrom = new Select(car.getYearFrom());
-		dropdownYearFrom.selectByValue(crs.getCarYearFrom());
+		dropdownYearFrom.selectByValue(yearFrom);
 		
 		// Scrolling
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -138,7 +136,8 @@ public class DropdownSelectTest extends BaseClass {
 				driver.findElement(By.xpath(sum)).click();;
 				driver.navigate().back();		
 		}
-
+		
+//		driver.navigate().back();
 		driver.get(getUrl());
 
 	}

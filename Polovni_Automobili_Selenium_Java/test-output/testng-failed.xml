@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="polovniautomobili.com.SearchTypingTest">
+      <class name="polovniautomobili.com.DropdownSelectTest">
         <methods>
+          <include name="carTest" invocation-numbers="0 1"/>
           <include name="tearDown"/>
           <include name="setup"/>
-          <include name="SearcCarsTest" invocation-numbers="1"/>
         </methods>
-      </class> <!-- polovniautomobili.com.SearchTypingTest -->
+      </class> <!-- polovniautomobili.com.DropdownSelectTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
