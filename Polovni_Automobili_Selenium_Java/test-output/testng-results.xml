@@ -1,25 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="3" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-27T16:53:20 CEST" name="Default suite" finished-at="2022-09-27T16:53:34 CEST" duration-ms="14345">
+  <suite started-at="2022-10-01T18:25:06 CEST" name="Default suite" finished-at="2022-10-01T18:25:42 CEST" duration-ms="36718">
     <groups>
     </groups>
-    <test started-at="2022-09-27T16:53:20 CEST" name="Default test" finished-at="2022-09-27T16:53:34 CEST" duration-ms="14345">
-      <class name="polovniautomobili.com.DropdownSelectTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:polovniautomobili.com.DropdownSelectTest@593aaf41]" started-at="2022-09-27T16:53:20 CEST" name="setup" finished-at="2022-09-27T16:53:28 CEST" duration-ms="7638" status="PASS">
+    <test started-at="2022-10-01T18:25:06 CEST" name="Default test" finished-at="2022-10-01T18:25:42 CEST" duration-ms="36718">
+      <class name="polovniautomobili.com.SearchTypingTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:polovniautomobili.com.SearchTypingTest@5a56cdac]" started-at="2022-10-01T18:25:06 CEST" name="setup" finished-at="2022-10-01T18:25:16 CEST" duration-ms="10519" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="motorcyclesTest()[pri:0, instance:polovniautomobili.com.DropdownSelectTest@593aaf41]" started-at="2022-09-27T16:53:28 CEST" name="motorcyclesTest" finished-at="2022-09-27T16:53:34 CEST" duration-ms="6492" status="PASS">
+        <test-method signature="SearcCarsTest(java.lang.String)[pri:0, instance:polovniautomobili.com.SearchTypingTest@5a56cdac]" started-at="2022-10-01T18:25:16 CEST" name="SearcCarsTest" data-provider="SearchCarsProvider" finished-at="2022-10-01T18:25:31 CEST" duration-ms="14599" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[opel]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- motorcyclesTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:polovniautomobili.com.DropdownSelectTest@593aaf41]" started-at="2022-09-27T16:53:34 CEST" name="tearDown" finished-at="2022-09-27T16:53:34 CEST" duration-ms="166" status="PASS">
+        </test-method> <!-- SearcCarsTest -->
+        <test-method signature="SearcCarsTest(java.lang.String)[pri:0, instance:polovniautomobili.com.SearchTypingTest@5a56cdac]" started-at="2022-10-01T18:25:31 CEST" name="SearcCarsTest" data-provider="SearchCarsProvider" finished-at="2022-10-01T18:25:42 CEST" duration-ms="11282" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[fiat]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearcCarsTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:polovniautomobili.com.SearchTypingTest@5a56cdac]" started-at="2022-10-01T18:25:42 CEST" name="tearDown" finished-at="2022-10-01T18:25:42 CEST" duration-ms="235" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- polovniautomobili.com.DropdownSelectTest -->
+      </class> <!-- polovniautomobili.com.SearchTypingTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

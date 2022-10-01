@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import base.BaseClass;
@@ -42,7 +43,7 @@ public class DropdownSelectTest extends BaseClass {
 		driver.close();
 		driver = null;
 	}
-	
+
 
 	@Test
 	public void motorcyclesTest () throws IOException, InterruptedException {
@@ -78,9 +79,6 @@ public class DropdownSelectTest extends BaseClass {
 			dropdownType.selectByValue(crs.getMotorcycleTypeSportSuperSport());
 			System.out.println(crs.getMotorcycleTypeSportSuperSport());
 		}
-//		Select dropdownType = new Select(motoPage.getTypeMotorcycles());
-//		dropdownType.selectByValue(crs.getTypeOfMotorcycle());
-//		dropdownType.selectByValue("sport-super-sport");
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView();",motoPage.getButtonDetailedSearch());
@@ -144,5 +142,4 @@ public class DropdownSelectTest extends BaseClass {
 		driver.get(getUrl());
 
 	}
-	
 }

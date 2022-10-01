@@ -14,6 +14,11 @@ public class CarsPage {
 	By buttonDetailedSearch = By.cssSelector("button[name='isDetailed']");
 	By passengerAirbag = By.cssSelector("input#passenger_airbag");
 	By buttonSubmit = By.cssSelector("button[name='submit_1']");
+	By searchCarTyping = By.cssSelector("p[title=' Sve marke'] span[class='placeholder']");
+	By inputSearchText = By.xpath("//p[contains(@title,'Sve marke')]//input[@type='text']");
+	
+	By opel = By.xpath("//label[normalize-space()='Opel']");
+	By fiat = By.xpath("//label[normalize-space()='Fiat']");
 
 	
 	public CarsPage (WebDriver driver) {
@@ -42,5 +47,21 @@ public class CarsPage {
 	
 	public WebElement getButtonSubmit () {
 		return driver.findElement(buttonSubmit);
+	}
+	
+	public WebElement getSearchCarTyping () {
+		return driver.findElement(searchCarTyping);
+	}
+	
+	public WebElement getInputSearchText () {
+		return driver.findElement(inputSearchText);
+	}
+	
+	public WebElement getOpel () {
+		return driver.findElement(opel);
+	}
+	
+	public WebElement getFiat () {
+		return driver.findElement(fiat);
 	}
 }
