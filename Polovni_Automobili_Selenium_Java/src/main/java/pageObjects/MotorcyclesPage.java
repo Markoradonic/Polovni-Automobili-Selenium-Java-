@@ -1,10 +1,14 @@
 package pageObjects;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class MotorcyclesPage {
+import base.BaseClass;
+
+public class MotorcyclesPage extends BaseClass{
 	public WebDriver driver;
 	
 	By brandMotorcycles = By.cssSelector("select#brand");
@@ -27,56 +31,68 @@ public class MotorcyclesPage {
 	By bmw = By.xpath("//label[normalize-space()='BMW']");
 	By suzuki = By.xpath("//label[normalize-space()='Suzuki']");
 	
-	public MotorcyclesPage (WebDriver driver) {
-		this.driver = driver;
+	public MotorcyclesPage () throws IOException {
+		super();
 	}
 	
 	public WebElement getBrandMotorcycles () {
+		this.driver = getDriver();
 		return driver.findElement(brandMotorcycles);
 	}
 	
 	public WebElement getPrice () {
+		this.driver = getDriver();
 		return driver.findElement(price);
 	}
 	
 	public WebElement getModelMotorcycles () {
+		this.driver = getDriver();
 		return driver.findElement(modelMotorcycle);
 	}
 	
 	public WebElement getYearFrom () {
+		this.driver = getDriver();
 		return driver.findElement(yearFrom);
 	}
 	
 	public WebElement getTypeMotorcycles () {
+		this.driver = getDriver();
 		return driver.findElement(typeMotorcycles);
 	}
 	
 	public WebElement getButtonDetailedSearch () {
+		this.driver = getDriver();
 		return driver.findElement(buttonDetailedSearch);
 	}
 	
 	public WebElement getButtonSubmitt () {
+		this.driver = getDriver();
 		return driver.findElement(buttonSubmit);
 	}
 
 	public WebElement typingSearchTxtBrand() {
+		this.driver = getDriver();
 		return driver.findElement(typingSearchTxtBrand);
 		
 	}
 	
 	public WebElement getBrandMotorcyclesTxt () {
+		this.driver = getDriver();
 		return driver.findElement(brandMotorcyclesTxt);
 	}
 	
 	public WebElement getYamaha () {
+		this.driver = getDriver();
 		return driver.findElement(yamaha);
 	}
 	
 	public WebElement getBmw () {
+		this.driver = getDriver();
 		return driver.findElement(bmw);
 	}
 	
 	public WebElement getSuzuki () {
+		this.driver = getDriver();
 		return driver.findElement(suzuki);
 	}
 

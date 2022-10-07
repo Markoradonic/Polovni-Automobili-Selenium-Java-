@@ -12,7 +12,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
 	
-	public static WebDriver driver;
+
 	private Properties prop;
 	private String url;
 	
@@ -24,19 +24,13 @@ public class BaseClass {
 	}
 	
 	public WebDriver getDriver() {
-		
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		
-		return driver;
+		return WebDriverInstance.getDriver();
 	}
 	
 	public String getUrl() throws IOException {
 		url = prop.getProperty("url");
 		return url;
 	}
-	
+
 
 }

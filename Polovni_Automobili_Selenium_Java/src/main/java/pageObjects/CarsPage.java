@@ -1,10 +1,14 @@
 package pageObjects;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class CarsPage {
+import base.BaseClass;
+
+public class CarsPage extends BaseClass {
 
 	public WebDriver driver;
 	
@@ -21,47 +25,57 @@ public class CarsPage {
 	By fiat = By.xpath("//label[normalize-space()='Fiat']");
 
 	
-	public CarsPage (WebDriver driver) {
-		this.driver = driver;
+	public CarsPage () throws IOException {
+		super();
 	}
 	
 	public WebElement getBrandCars () {
+		this.driver = getDriver();
 		return driver.findElement(brandCars);
 	}
 	
 	public WebElement getModelCar () {
+		this.driver = getDriver();
 		return driver.findElement(modelCar);
 	}
 	
 	public WebElement getYearFrom () {
+		this.driver = getDriver();
 		return driver.findElement(yearFrom);
 	}
 	
 	public WebElement getButtonDetailedSearch () {
+		this.driver = getDriver();
 		return driver.findElement(buttonDetailedSearch);
 	}
 	
 	public WebElement getPassengerAirbag () {
+		this.driver = getDriver();
 		return driver.findElement(passengerAirbag);
 	}
 	
 	public WebElement getButtonSubmit () {
+		this.driver = getDriver();
 		return driver.findElement(buttonSubmit);
 	}
 	
 	public WebElement getSearchCarTyping () {
+		this.driver = getDriver();
 		return driver.findElement(searchCarTyping);
 	}
 	
 	public WebElement getInputSearchText () {
+		this.driver = getDriver();
 		return driver.findElement(inputSearchText);
 	}
 	
 	public WebElement getOpel () {
+		this.driver = getDriver();
 		return driver.findElement(opel);
 	}
 	
 	public WebElement getFiat () {
+		this.driver = getDriver();
 		return driver.findElement(fiat);
 	}
 }
