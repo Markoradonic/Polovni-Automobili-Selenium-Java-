@@ -56,7 +56,7 @@ public class CarsTest extends Hooks {
 		Select dropdownModelCar = new Select(car.getModelCar());
 		dropdownModelCar.selectByValue(model);
 		
-		Select dropdownYearFrom = new Select(car.getYearFrom());
+		Select dropdownYearFrom = new Select(car.getSelectYearFrom());
 		dropdownYearFrom.selectByValue(yearFrom);
 		
 		// Scrolling

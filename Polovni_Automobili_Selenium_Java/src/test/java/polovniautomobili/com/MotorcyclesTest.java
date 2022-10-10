@@ -81,15 +81,21 @@ public class MotorcyclesTest extends Hooks {
 		
 		Thread.sleep(1000);
 		if (motorcyclesPage.getYamaha().getText().contains("Yamaha")) {
-			motorcyclesPage.getYamaha().click();
+//			motorcyclesPage.getYamaha().click();
+			Select dropdownType = new Select(motorcyclesPage.getBrandMotorcycles());
+			dropdownType.selectByValue("yamaha");
 		}
 		Thread.sleep(1000);
 		if(motorcyclesPage.getBmw().getText().contains("BMW")) {
-			motorcyclesPage.getBmw().click();
+//			motorcyclesPage.getBmw().click();
+			Select dropdownType = new Select(motorcyclesPage.getBrandMotorcycles());
+			dropdownType.selectByValue("bmw");
 		}
 		Thread.sleep(1000);
 		if(motorcyclesPage.getSuzuki().getText().contains("Suzuki")) {
-			motorcyclesPage.getSuzuki().click();
+//			motorcyclesPage.getSuzuki().click();
+			Select dropdownType = new Select(motorcyclesPage.getBrandMotorcycles());
+			dropdownType.selectByValue("suzuki");
 		}
 		
 		motorcyclesPage.getModelMotorcycles().sendKeys(model);

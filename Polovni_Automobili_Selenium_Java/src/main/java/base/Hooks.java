@@ -24,7 +24,7 @@ public class Hooks extends BaseClass {
 
 	@AfterTest
 	public void tearDown() {
-		WebDriverInstance.cleanupDriver();
+//		WebDriverInstance.cleanupDriver();
 	}
 	
 

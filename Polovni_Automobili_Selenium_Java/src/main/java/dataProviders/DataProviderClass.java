@@ -76,4 +76,13 @@ public class DataProviderClass {
 		return dataset;
 	}
 	
+	@DataProvider
+	public Object [][] loginCredentials (){
+
+		return new Object [][] {
+			{"marko.radonicc@outlook.com", "Test123124" , "marko.radonic@outlook.com", "Test12345"}
+	
+		};
+	}
+	
 }

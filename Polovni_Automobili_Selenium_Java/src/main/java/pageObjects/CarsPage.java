@@ -14,12 +14,14 @@ public class CarsPage extends BaseClass {
 	
 	By brandCars = By.xpath("/html//select[@id='brand']");
 	By modelCar = By.xpath("/html//select[@id='model']");
-	By yearFrom = By.xpath("/html//select[@id='year_from']");
+	By selectYearFrom = By.xpath("/html//select[@id='year_from']");
+	By typingYearFrom = By.xpath("/html//div[@class='searchFormHolder']/div/div[@class='table']//form/div/div[4]/div[@class='uk-grid']/div[1]/div[@role='button']/p[@title=' Godište od']/span[@class='placeholder']");
 	By buttonDetailedSearch = By.cssSelector("button[name='isDetailed']");
 	By passengerAirbag = By.cssSelector("input#passenger_airbag");
 	By buttonSubmit = By.cssSelector("button[name='submit_1']");
 	By searchCarTyping = By.cssSelector("p[title=' Sve marke'] span[class='placeholder']");
 	By inputSearchText = By.xpath("//p[contains(@title,'Sve marke')]//input[@type='text']");
+	
 	
 	By opel = By.xpath("//label[normalize-space()='Opel']");
 	By fiat = By.xpath("//label[normalize-space()='Fiat']");
@@ -39,10 +41,16 @@ public class CarsPage extends BaseClass {
 		return driver.findElement(modelCar);
 	}
 	
-	public WebElement getYearFrom () {
+	public WebElement getSelectYearFrom() {
 		this.driver = getDriver();
-		return driver.findElement(yearFrom);
+		return driver.findElement(selectYearFrom);
 	}
+	
+	public WebElement getTypingYearFrom () {
+		this.driver = getDriver();
+		return driver.findElement(typingYearFrom);
+	}
+	
 	
 	public WebElement getButtonDetailedSearch () {
 		this.driver = getDriver();

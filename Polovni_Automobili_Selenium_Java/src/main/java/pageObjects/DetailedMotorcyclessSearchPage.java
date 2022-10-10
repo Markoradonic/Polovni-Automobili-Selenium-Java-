@@ -8,13 +8,13 @@ import org.openqa.selenium.WebElement;
 
 import base.BaseClass;
 
-public class DetailedMotorcyclessSearchClass extends BaseClass{
+public class DetailedMotorcyclessSearchPage extends BaseClass {
 	public WebDriver driver;
 	
 	By cylinder = By.cssSelector("select#cylinder");
 	
 	
-	public DetailedMotorcyclessSearchClass () throws IOException {
+	public DetailedMotorcyclessSearchPage () throws IOException {
 		 super();
 	}
 

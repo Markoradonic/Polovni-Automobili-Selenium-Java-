@@ -12,7 +12,8 @@ public class HomePage extends BaseClass {
 	
 public WebDriver driver;
 
-By Mtorcycles = By.cssSelector("a[title='Motori'] > .icon-cat-29");
+By Motorcycles = By.cssSelector("a[title='Motori'] > .icon-cat-29");
+By savedSearch = By.cssSelector(".js-bookmarks-show.paOrangeButtonTertiary.uk-width-1-1");
 
 public HomePage () throws IOException {
 	super();
@@ -20,7 +21,12 @@ public HomePage () throws IOException {
 
 public WebElement getMtorcycles () {
 	this.driver = getDriver();
-	return driver.findElement(Mtorcycles);
+	return driver.findElement(Motorcycles);
+}
+
+public WebElement getSavedSearch () {
+	this.driver = getDriver();
+	return driver.findElement(savedSearch);
 }
 
 }

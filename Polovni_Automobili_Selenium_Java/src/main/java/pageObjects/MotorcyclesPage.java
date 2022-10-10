@@ -31,6 +31,7 @@ public class MotorcyclesPage extends BaseClass{
 	By bmw = By.xpath("//label[normalize-space()='BMW']");
 	By suzuki = By.xpath("//label[normalize-space()='Suzuki']");
 	
+	
 	public MotorcyclesPage () throws IOException {
 		super();
 	}
