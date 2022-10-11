@@ -1,73 +1,259 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="10" total="22" passed="12" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-09T21:50:03 CEST" name="Default suite" finished-at="2022-10-09T21:50:17 CEST" duration-ms="14205">
+  <suite started-at="2022-10-11T14:28:48 CEST" name="Default suite" finished-at="2022-10-11T14:33:19 CEST" duration-ms="270570">
     <groups>
     </groups>
-    <test started-at="2022-10-09T21:50:03 CEST" name="Default test" finished-at="2022-10-09T21:50:17 CEST" duration-ms="14205">
+    <test started-at="2022-10-11T14:28:48 CEST" name="Default test" finished-at="2022-10-11T14:33:19 CEST" duration-ms="270570">
       <class name="polovniautomobili.com.LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:polovniautomobili.com.LoginTest@5a56cdac]" started-at="2022-10-09T21:50:03 CEST" name="setup" finished-at="2022-10-09T21:50:11 CEST" duration-ms="7906" status="PASS">
+        <test-method signature="logInCredentials(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:polovniautomobili.com.LoginTest@41a0aa7d]" started-at="2022-10-11T14:29:46 CEST" name="logInCredentials" data-provider="loginCredentials" finished-at="2022-10-11T14:29:57 CEST" duration-ms="11071" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[marko.radonicc@outlook.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Test123124]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[marko.radonic@outlook.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Test12345]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logInCredentials -->
+      </class> <!-- polovniautomobili.com.LoginTest -->
+      <class name="base.Hooks">
+        <test-method is-config="true" signature="setup()[pri:0, instance:base.Hooks@2e6a8155]" started-at="2022-10-11T14:28:49 CEST" name="setup" finished-at="2022-10-11T14:29:03 CEST" duration-ms="14002" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="invalidCredentials(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:polovniautomobili.com.LoginTest@5a56cdac]" started-at="2022-10-09T21:50:11 CEST" name="invalidCredentials" data-provider="loginCredentials" finished-at="2022-10-09T21:50:17 CEST" duration-ms="6161" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[marko.radonicc@outlook.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Test123124]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[marko.radonic@outlook.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Test12345]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- invalidCredentials -->
-        <test-method signature="validCredentials(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:polovniautomobili.com.LoginTest@5a56cdac]" started-at="2022-10-09T21:50:17 CEST" name="validCredentials" data-provider="loginCredentials" finished-at="2022-10-09T21:50:17 CEST" duration-ms="63" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[marko.radonicc@outlook.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Test123124]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[marko.radonic@outlook.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Test12345]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validCredentials -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:polovniautomobili.com.LoginTest@5a56cdac]" started-at="2022-10-09T21:50:17 CEST" name="tearDown" finished-at="2022-10-09T21:50:17 CEST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:base.Hooks@2e6a8155]" started-at="2022-10-11T14:33:18 CEST" name="tearDown" finished-at="2022-10-11T14:33:19 CEST" duration-ms="1124" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- polovniautomobili.com.LoginTest -->
+      </class> <!-- base.Hooks -->
+      <class name="polovniautomobili.com.InvalidEntryTest">
+        <test-method signature="invalidEntryTest()[pri:0, instance:polovniautomobili.com.InvalidEntryTest@2794eab6]" started-at="2022-10-11T14:29:57 CEST" name="invalidEntryTest" finished-at="2022-10-11T14:30:00 CEST" duration-ms="3182" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidEntryTest -->
+      </class> <!-- polovniautomobili.com.InvalidEntryTest -->
+      <class name="polovniautomobili.com.CheckboxTest">
+        <test-method signature="selectCheckbox()[pri:0, instance:polovniautomobili.com.CheckboxTest@e350b40]" started-at="2022-10-11T14:29:03 CEST" name="selectCheckbox" finished-at="2022-10-11T14:29:46 CEST" duration-ms="43607" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectCheckbox -->
+      </class> <!-- polovniautomobili.com.CheckboxTest -->
+      <class name="polovniautomobili.com.CarsTest">
+        <test-method signature="dropdownCarTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:polovniautomobili.com.CarsTest@6340e5f0]" started-at="2022-10-11T14:30:00 CEST" name="dropdownCarTest" data-provider="DropdownCarsProvider" finished-at="2022-10-11T14:31:56 CEST" duration-ms="115422" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[fiat]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[punto]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[2010]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dropdownCarTest -->
+        <test-method signature="dropdownCarTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:polovniautomobili.com.CarsTest@6340e5f0]" started-at="2022-10-11T14:31:56 CEST" name="dropdownCarTest" data-provider="DropdownCarsProvider" finished-at="2022-10-11T14:32:12 CEST" duration-ms="15750" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[opel]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[corsa]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[2005]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dropdownCarTest -->
+        <test-method signature="searcCarsTest(java.lang.String)[pri:0, instance:polovniautomobili.com.CarsTest@6340e5f0]" started-at="2022-10-11T14:32:12 CEST" name="searcCarsTest" data-provider="SearchCarsProvider" finished-at="2022-10-11T14:32:22 CEST" duration-ms="10028" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[opel]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searcCarsTest -->
+        <test-method signature="searcCarsTest(java.lang.String)[pri:0, instance:polovniautomobili.com.CarsTest@6340e5f0]" started-at="2022-10-11T14:32:22 CEST" name="searcCarsTest" data-provider="SearchCarsProvider" finished-at="2022-10-11T14:32:30 CEST" duration-ms="8341" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[fiat]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searcCarsTest -->
+      </class> <!-- polovniautomobili.com.CarsTest -->
+      <class name="polovniautomobili.com.MotorcyclesTest">
+        <test-method signature="SearchTypingMotorcycleTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:polovniautomobili.com.MotorcyclesTest@45099dd3]" started-at="2022-10-11T14:32:30 CEST" name="SearchTypingMotorcycleTest" data-provider="SearchMotorcyclesProvider" finished-at="2022-10-11T14:32:42 CEST" duration-ms="11843" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[yamaha]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[mt]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[supermoto]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[7000]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchTypingMotorcycleTest -->
+        <test-method signature="SearchTypingMotorcycleTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:polovniautomobili.com.MotorcyclesTest@45099dd3]" started-at="2022-10-11T14:32:42 CEST" name="SearchTypingMotorcycleTest" data-provider="SearchMotorcyclesProvider" finished-at="2022-10-11T14:32:53 CEST" duration-ms="11271" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[bmw]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[gs]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[scooter]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[2000]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchTypingMotorcycleTest -->
+        <test-method signature="SearchTypingMotorcycleTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:polovniautomobili.com.MotorcyclesTest@45099dd3]" started-at="2022-10-11T14:32:53 CEST" name="SearchTypingMotorcycleTest" data-provider="SearchMotorcyclesProvider" finished-at="2022-10-11T14:33:05 CEST" duration-ms="11481" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[suzuki]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[gsxr]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[touring]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[3000]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchTypingMotorcycleTest -->
+        <test-method signature="dropdownMotorcycTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:polovniautomobili.com.MotorcyclesTest@45099dd3]" started-at="2022-10-11T14:33:05 CEST" name="dropdownMotorcycTest" data-provider="DropdownMotorcyclesProvider" finished-at="2022-10-11T14:33:12 CEST" duration-ms="7415" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[yamaha]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[mt]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[7000]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[2000]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dropdownMotorcycTest -->
+        <test-method signature="dropdownMotorcycTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:polovniautomobili.com.MotorcyclesTest@45099dd3]" started-at="2022-10-11T14:33:12 CEST" name="dropdownMotorcycTest" data-provider="DropdownMotorcyclesProvider" finished-at="2022-10-11T14:33:18 CEST" duration-ms="5907" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[suzuki]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[gsxr]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[6000]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[2005]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dropdownMotorcycTest -->
+      </class> <!-- polovniautomobili.com.MotorcyclesTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

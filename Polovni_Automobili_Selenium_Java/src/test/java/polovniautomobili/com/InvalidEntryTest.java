@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import base.Hooks;
 import pageObjects.CarsPage;
+import pageObjects.HomePage;
 
 public class InvalidEntryTest extends Hooks{
 
@@ -19,7 +20,9 @@ public class InvalidEntryTest extends Hooks{
 	@Test
 	public void invalidEntryTest () throws IOException {
 		CarsPage selectCar = new CarsPage();
-
+		HomePage homePage = new HomePage();
+		
+		homePage.getCars().click();
 		selectCar.getSearchCarTyping().click();
 		selectCar.getInputSearchText().sendKeys("sdfsdf");
 		
@@ -30,7 +33,7 @@ public class InvalidEntryTest extends Hooks{
 			 Assert.fail("string must not be entered ");
 
 		} catch (Exception e) {
-			System.out.print("string is not entered ");
+			System.out.println("string is not entered ");
 		}
 	}
 	

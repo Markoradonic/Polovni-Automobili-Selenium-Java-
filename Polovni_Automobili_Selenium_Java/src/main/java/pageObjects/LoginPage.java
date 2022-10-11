@@ -20,7 +20,9 @@ public WebDriver driver;
 	By buttonNextStep = By.cssSelector("button#next-step");
 	By inputPasswordHeader = By.cssSelector("input#password_header");
 	By buttonLogin = By.cssSelector("button[name='login']");
-
+	By alertInvalidPassword = By.xpath("/html/body[@class='full-page']/div//p[@class='uk-alert uk-alert-danger']/a[@href='#']/strong[.='Zaboravljena šifra']");
+	By alertInvalidUserName = By.xpath("/html/body[@class='full-page']/div//form[@action='/login_check']//div[.='Ne postoji nalog sa ovom mail adresom.']");
+	
 	public WebElement getInputUserName () {
 		this.driver = getDriver();
 		return driver.findElement(inputUserName);
@@ -40,6 +42,17 @@ public WebDriver driver;
 		this.driver = getDriver();
 		return driver.findElement(buttonLogin);
 	}
+	
+	public WebElement getAlertInvalidPassword () {
+		this.driver = getDriver();
+		return driver.findElement(alertInvalidPassword);
+	}
+	
+	public WebElement getAlertInvalidUserName () {
+		this.driver = getDriver();
+		return driver.findElement(alertInvalidUserName);
+	}
+	
 	
 
 }
