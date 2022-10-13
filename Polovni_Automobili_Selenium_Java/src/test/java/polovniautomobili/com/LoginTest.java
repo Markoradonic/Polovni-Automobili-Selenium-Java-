@@ -40,12 +40,14 @@ public class LoginTest extends Hooks{
 		getDriver().navigate().refresh();
 		loginPage.getInputUserName().sendKeys(validUsername);
 		loginPage.getButtonNextStep().click();
+		
 		loginPage.getInputPasswordHeader().sendKeys(invalidPass);
 		loginPage.getButtonLogin().click();
 		String invalidPasswordEx = "Zaboravljena šifra";
 		Assert.assertEquals(loginPage.getAlertInvalidPassword().getText(), invalidPasswordEx);
 		System.out.println(loginPage.getAlertInvalidPassword().getText());
 		loginPage.getButtonNextStep().click();
+		
 		loginPage.getInputPasswordHeader().sendKeys(validPass);
 		loginPage.getButtonLogin().click();
 		System.out.println("user " + logInUser.getCurrentUser().getText() + " log in");

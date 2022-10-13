@@ -6,10 +6,40 @@
       <class name="polovniautomobili.com.MotorcyclesTest">
         <methods>
           <include name="setup"/>
-          <include name="SearchTypingMotorcycleTest" invocation-numbers="2"/>
+          <include name="SearchTypingMotorcycleTest" invocation-numbers="0 1 2"/>
           <include name="tearDown"/>
+          <include name="dropdownMotorcycTest" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- polovniautomobili.com.MotorcyclesTest -->
+      <class name="polovniautomobili.com.CarsTest">
+        <methods>
+          <include name="setup"/>
+          <include name="dropdownCarTest" invocation-numbers="0 1"/>
+          <include name="tearDown"/>
+          <include name="searcCarsTest" invocation-numbers="0 1"/>
+        </methods>
+      </class> <!-- polovniautomobili.com.CarsTest -->
+      <class name="polovniautomobili.com.CheckboxTest">
+        <methods>
+          <include name="selectCheckbox"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- polovniautomobili.com.CheckboxTest -->
+      <class name="polovniautomobili.com.InvalidEntryTest">
+        <methods>
+          <include name="invalidEntryTest"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- polovniautomobili.com.InvalidEntryTest -->
+      <class name="polovniautomobili.com.LoginTest">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="logInCredentials" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- polovniautomobili.com.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

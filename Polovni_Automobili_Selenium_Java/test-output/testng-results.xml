@@ -2,12 +2,12 @@
 <testng-results ignored="10" total="22" passed="12" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-11T14:28:48 CEST" name="Default suite" finished-at="2022-10-11T14:33:19 CEST" duration-ms="270570">
+  <suite started-at="2022-10-13T14:55:41 CEST" name="Default suite" finished-at="2022-10-13T14:59:05 CEST" duration-ms="203846">
     <groups>
     </groups>
-    <test started-at="2022-10-11T14:28:48 CEST" name="Default test" finished-at="2022-10-11T14:33:19 CEST" duration-ms="270570">
+    <test started-at="2022-10-13T14:55:41 CEST" name="Default test" finished-at="2022-10-13T14:59:05 CEST" duration-ms="203846">
       <class name="polovniautomobili.com.LoginTest">
-        <test-method signature="logInCredentials(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:polovniautomobili.com.LoginTest@41a0aa7d]" started-at="2022-10-11T14:29:46 CEST" name="logInCredentials" data-provider="loginCredentials" finished-at="2022-10-11T14:29:57 CEST" duration-ms="11071" status="PASS">
+        <test-method signature="logInCredentials(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:polovniautomobili.com.LoginTest@13e344d]" started-at="2022-10-13T14:56:57 CEST" name="logInCredentials" data-provider="loginCredentials" finished-at="2022-10-13T14:57:10 CEST" duration-ms="13373" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -35,29 +35,29 @@
         </test-method> <!-- logInCredentials -->
       </class> <!-- polovniautomobili.com.LoginTest -->
       <class name="base.Hooks">
-        <test-method is-config="true" signature="setup()[pri:0, instance:base.Hooks@2e6a8155]" started-at="2022-10-11T14:28:49 CEST" name="setup" finished-at="2022-10-11T14:29:03 CEST" duration-ms="14002" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:base.Hooks@4a883b15]" started-at="2022-10-13T14:55:41 CEST" name="setup" finished-at="2022-10-13T14:55:54 CEST" duration-ms="12723" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:base.Hooks@2e6a8155]" started-at="2022-10-11T14:33:18 CEST" name="tearDown" finished-at="2022-10-11T14:33:19 CEST" duration-ms="1124" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:base.Hooks@4a883b15]" started-at="2022-10-13T14:59:03 CEST" name="tearDown" finished-at="2022-10-13T14:59:05 CEST" duration-ms="1436" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- base.Hooks -->
       <class name="polovniautomobili.com.InvalidEntryTest">
-        <test-method signature="invalidEntryTest()[pri:0, instance:polovniautomobili.com.InvalidEntryTest@2794eab6]" started-at="2022-10-11T14:29:57 CEST" name="invalidEntryTest" finished-at="2022-10-11T14:30:00 CEST" duration-ms="3182" status="PASS">
+        <test-method signature="invalidEntryTest()[pri:0, instance:polovniautomobili.com.InvalidEntryTest@1ffaf86]" started-at="2022-10-13T14:57:10 CEST" name="invalidEntryTest" finished-at="2022-10-13T14:57:14 CEST" duration-ms="3823" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidEntryTest -->
       </class> <!-- polovniautomobili.com.InvalidEntryTest -->
       <class name="polovniautomobili.com.CheckboxTest">
-        <test-method signature="selectCheckbox()[pri:0, instance:polovniautomobili.com.CheckboxTest@e350b40]" started-at="2022-10-11T14:29:03 CEST" name="selectCheckbox" finished-at="2022-10-11T14:29:46 CEST" duration-ms="43607" status="PASS">
+        <test-method signature="selectCheckbox()[pri:0, instance:polovniautomobili.com.CheckboxTest@45099dd3]" started-at="2022-10-13T14:55:54 CEST" name="selectCheckbox" finished-at="2022-10-13T14:56:57 CEST" duration-ms="63144" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectCheckbox -->
       </class> <!-- polovniautomobili.com.CheckboxTest -->
       <class name="polovniautomobili.com.CarsTest">
-        <test-method signature="dropdownCarTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:polovniautomobili.com.CarsTest@6340e5f0]" started-at="2022-10-11T14:30:00 CEST" name="dropdownCarTest" data-provider="DropdownCarsProvider" finished-at="2022-10-11T14:31:56 CEST" duration-ms="115422" status="PASS">
+        <test-method signature="dropdownCarTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:polovniautomobili.com.CarsTest@6574a52c]" started-at="2022-10-13T14:57:14 CEST" name="dropdownCarTest" data-provider="DropdownCarsProvider" finished-at="2022-10-13T14:57:32 CEST" duration-ms="17832" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -78,7 +78,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dropdownCarTest -->
-        <test-method signature="dropdownCarTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:polovniautomobili.com.CarsTest@6340e5f0]" started-at="2022-10-11T14:31:56 CEST" name="dropdownCarTest" data-provider="DropdownCarsProvider" finished-at="2022-10-11T14:32:12 CEST" duration-ms="15750" status="PASS">
+        <test-method signature="dropdownCarTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:polovniautomobili.com.CarsTest@6574a52c]" started-at="2022-10-13T14:57:32 CEST" name="dropdownCarTest" data-provider="DropdownCarsProvider" finished-at="2022-10-13T14:57:48 CEST" duration-ms="15931" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -99,7 +99,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dropdownCarTest -->
-        <test-method signature="searcCarsTest(java.lang.String)[pri:0, instance:polovniautomobili.com.CarsTest@6340e5f0]" started-at="2022-10-11T14:32:12 CEST" name="searcCarsTest" data-provider="SearchCarsProvider" finished-at="2022-10-11T14:32:22 CEST" duration-ms="10028" status="PASS">
+        <test-method signature="searcCarsTest(java.lang.String)[pri:0, instance:polovniautomobili.com.CarsTest@6574a52c]" started-at="2022-10-13T14:57:48 CEST" name="searcCarsTest" data-provider="SearchCarsProvider" finished-at="2022-10-13T14:58:00 CEST" duration-ms="11634" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -110,7 +110,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searcCarsTest -->
-        <test-method signature="searcCarsTest(java.lang.String)[pri:0, instance:polovniautomobili.com.CarsTest@6340e5f0]" started-at="2022-10-11T14:32:22 CEST" name="searcCarsTest" data-provider="SearchCarsProvider" finished-at="2022-10-11T14:32:30 CEST" duration-ms="8341" status="PASS">
+        <test-method signature="searcCarsTest(java.lang.String)[pri:0, instance:polovniautomobili.com.CarsTest@6574a52c]" started-at="2022-10-13T14:58:00 CEST" name="searcCarsTest" data-provider="SearchCarsProvider" finished-at="2022-10-13T14:58:11 CEST" duration-ms="11399" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -123,7 +123,7 @@
         </test-method> <!-- searcCarsTest -->
       </class> <!-- polovniautomobili.com.CarsTest -->
       <class name="polovniautomobili.com.MotorcyclesTest">
-        <test-method signature="SearchTypingMotorcycleTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:polovniautomobili.com.MotorcyclesTest@45099dd3]" started-at="2022-10-11T14:32:30 CEST" name="SearchTypingMotorcycleTest" data-provider="SearchMotorcyclesProvider" finished-at="2022-10-11T14:32:42 CEST" duration-ms="11843" status="PASS">
+        <test-method signature="SearchTypingMotorcycleTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:polovniautomobili.com.MotorcyclesTest@6c1a5b54]" started-at="2022-10-13T14:58:11 CEST" name="SearchTypingMotorcycleTest" data-provider="SearchMotorcyclesProvider" finished-at="2022-10-13T14:58:23 CEST" duration-ms="12055" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -149,7 +149,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SearchTypingMotorcycleTest -->
-        <test-method signature="SearchTypingMotorcycleTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:polovniautomobili.com.MotorcyclesTest@45099dd3]" started-at="2022-10-11T14:32:42 CEST" name="SearchTypingMotorcycleTest" data-provider="SearchMotorcyclesProvider" finished-at="2022-10-11T14:32:53 CEST" duration-ms="11271" status="PASS">
+        <test-method signature="SearchTypingMotorcycleTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:polovniautomobili.com.MotorcyclesTest@6c1a5b54]" started-at="2022-10-13T14:58:23 CEST" name="SearchTypingMotorcycleTest" data-provider="SearchMotorcyclesProvider" finished-at="2022-10-13T14:58:35 CEST" duration-ms="12053" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -175,7 +175,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SearchTypingMotorcycleTest -->
-        <test-method signature="SearchTypingMotorcycleTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:polovniautomobili.com.MotorcyclesTest@45099dd3]" started-at="2022-10-11T14:32:53 CEST" name="SearchTypingMotorcycleTest" data-provider="SearchMotorcyclesProvider" finished-at="2022-10-11T14:33:05 CEST" duration-ms="11481" status="PASS">
+        <test-method signature="SearchTypingMotorcycleTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:polovniautomobili.com.MotorcyclesTest@6c1a5b54]" started-at="2022-10-13T14:58:35 CEST" name="SearchTypingMotorcycleTest" data-provider="SearchMotorcyclesProvider" finished-at="2022-10-13T14:58:47 CEST" duration-ms="11855" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -201,7 +201,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SearchTypingMotorcycleTest -->
-        <test-method signature="dropdownMotorcycTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:polovniautomobili.com.MotorcyclesTest@45099dd3]" started-at="2022-10-11T14:33:05 CEST" name="dropdownMotorcycTest" data-provider="DropdownMotorcyclesProvider" finished-at="2022-10-11T14:33:12 CEST" duration-ms="7415" status="PASS">
+        <test-method signature="dropdownMotorcycTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:polovniautomobili.com.MotorcyclesTest@6c1a5b54]" started-at="2022-10-13T14:58:47 CEST" name="dropdownMotorcycTest" data-provider="DropdownMotorcyclesProvider" finished-at="2022-10-13T14:58:57 CEST" duration-ms="9747" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -227,7 +227,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dropdownMotorcycTest -->
-        <test-method signature="dropdownMotorcycTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:polovniautomobili.com.MotorcyclesTest@45099dd3]" started-at="2022-10-11T14:33:12 CEST" name="dropdownMotorcycTest" data-provider="DropdownMotorcyclesProvider" finished-at="2022-10-11T14:33:18 CEST" duration-ms="5907" status="PASS">
+        <test-method signature="dropdownMotorcycTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:polovniautomobili.com.MotorcyclesTest@6c1a5b54]" started-at="2022-10-13T14:58:57 CEST" name="dropdownMotorcycTest" data-provider="DropdownMotorcyclesProvider" finished-at="2022-10-13T14:59:03 CEST" duration-ms="6719" status="PASS">
           <params>
             <param index="0">
               <value>
